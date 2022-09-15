@@ -1,0 +1,14 @@
+<aura:component controller="AccountManager_AuraMethod2_L21">
+    <aura:attribute name="boolFlag" type="boolean" default="false"/>
+    <aura:attribute name="lstAccounts" type="List" />
+    <aura:attribute name="myColumns" type="List" />
+	<aura:method name="getData" action="{!c.showAccounts}">
+        <aura:attribute name="flag" type="boolean" default="false"/>
+    </aura:method>
+    <aura:if isTrue="{!v.boolFlag}">
+    <lightning:dataTable 
+                         keyField="Id"
+                         data="{!v.lstAccounts}"
+                         columns="{!v.myColumns}"/>
+    </aura:if>
+</aura:component>

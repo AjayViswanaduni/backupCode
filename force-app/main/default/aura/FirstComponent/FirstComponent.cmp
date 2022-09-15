@@ -1,0 +1,93 @@
+<aura:component >
+    <aura:attribute type="String" name="Title" default="Customer Personal Details"/>
+    <aura:attribute type="String" name="FirstName" default="Ajay"/>
+    <aura:attribute type="String" name="LastName" default="Viswanaduni"/>
+    <aura:attribute type="String" name="Phone" default="98856343248"/>
+    <aura:attribute type="String" name="email" default="ajayviswanaduni4248@gmail.com"/>
+    <aura:attribute type="String" name="City" default="Tirupati"/>
+    <aura:attribute type="String" name="Country" default="India"/>
+    <aura:attribute type="String" name="CompanyDetails" default="SSS pvt ltd"/>
+	<!--we need to write our code inside the parent tags-->
+    <!-- Component Bundle Uses
+      Component=> is a reusable entity,
+      Controller=> is the js code which is the anchor to connect to server side controller,
+      Helper=> is a reusable/common method that can be used in multiple components in an application,
+      Style=> is a css we can define the cascading style sheets,Information about our application,
+      Renderer=>there are some standard render methods..using these methods we can render our component,
+      Design=>If we want to control the component Custom css while the time of using components in lightning pages we use this element
+      SVG=>Used to build Custom Icons -->
+   
+    <div style="margin-left:100px;border:1px solid black;width:600px;">
+      <table style="padding:10px;">
+        <tr>
+          <td>
+              <center><b>{!v.Title}</b></center>
+            </td> 
+         </tr>
+          <tr style="height:10px;"></tr>
+          <tr>
+          <td>
+              First Name
+              </td>
+              <td>
+                  {!v.FirstName}
+              </td>
+          </tr>
+           <tr style="height:10px;"></tr>
+          <tr>
+          <td>
+              Last Name
+              </td>
+              <td>
+                  {!v.LastName}
+              </td>
+          </tr>
+           <tr style="height:10px;"></tr>
+          <tr>
+          <td>
+              Phone
+              </td>
+              <td>
+                {!v.Phone}
+              </td>
+          </tr>
+           <tr style="height:10px;"></tr>
+          <tr>
+          <td>
+              Email
+              </td>
+              <td>
+                  {!v.email}
+              </td>
+          </tr>
+           <tr style="height:10px;"></tr>
+          <tr>
+          <td>
+              City
+              </td>
+              <td>
+                  {!v.City}
+              </td>
+          </tr>
+           <tr style="height:10px;"></tr>
+          <tr>
+          <td>
+              Country
+              </td>
+              <td>
+                  {!v.Country}
+              </td>
+          </tr>
+           <tr style="height:10px;"></tr>
+          <tr>
+          <td>
+              CompanyDetails
+              </td>
+              <td>
+                  {!v.CompanyDetails}
+              </td>
+          </tr>
+           <tr style="height:10px;"></tr>
+        </table>  
+    </div>
+</aura:component>

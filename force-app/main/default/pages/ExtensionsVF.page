@@ -1,0 +1,40 @@
+<apex:page standardController="account" recordSetVar="accList" extensions="ContactExtCtrl,OppExtCtrl">
+<apex:form >
+   <apex:pageBlock title="Account Records">
+    <apex:outputPanel layout="block" style="overflow:auto;height:150px">
+     <apex:pageblocktable value="{!accList}" var="acc">
+       <apex:column value="{!acc.name}"/>
+       <apex:column value="{!acc.phone}"/>
+       <apex:column value="{!acc.industry}"/>
+       <apex:column value="{!acc.rating}"/>
+       <apex:column value="{!acc.annualRevenue}"/>
+       <apex:column value="{!acc.website}"/>
+      </apex:pageBlockTable>
+    </apex:outputPanel>
+  </apex:pageBlock>
+  
+    <apex:pageBlock title="Extensions Example" >
+    <apex:pageBlockSection >
+        <apex:pageBlock title="Contact Records">
+        <apex:outputPanel layout="block" style="overflow:auto;height:150px;width:750px">
+          <apex:pageBlockTable value="{!conList}" var="con">
+            <apex:column value="{!con.firstName}"/>
+            <apex:column value="{!con.lastName}"/>
+            <apex:column value="{!con.birthdate}"/>
+          </apex:pageBlockTable>
+          </apex:outputPanel>
+          </apex:pageBlock>
+         <apex:pageBlock title="Opportunity Records">
+         <apex:outputPanel layout="block" style="overflow:auto;height:150px;width:750px">
+          <apex:pageBlockTable value="{!oppList}" var="opp">
+            <apex:column value="{!opp.name}"/>
+            <apex:column value="{!opp.probability}"/>
+            <apex:column value="{!opp.stageName}"/>
+            <apex:column value="{!opp.type}"/>
+          </apex:pageBlockTable>
+          </apex:outputPanel>
+         </apex:pageBlock>
+         </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:form>  
+</apex:page>

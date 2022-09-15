@@ -1,0 +1,10 @@
+<aura:component controller="AEvent4_L17">
+    <aura:registerEvent name="first" type="c:AEvent4_L17"/>
+    <aura:attribute name="IndustryKey" type="string"/>
+    <lightning:card title="List of Accounts based on Industry" iconName="standard:account">
+        <aura:set attribute="actions">
+            <lightning:button label="Search" onclick="{!c.invoke}"/>    
+        </aura:set>
+        <lightning:input label="Industry Name" value="{!v.IndustryKey}"/>
+    </lightning:card>
+</aura:component>

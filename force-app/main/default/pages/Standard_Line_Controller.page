@@ -1,0 +1,10 @@
+<apex:page standardController="Course__c" recordSetVar="crss">
+  <apex:pageBlock title="Data List">
+  <apex:dataList var="course_name" value="{!crss}" type="1" style="1" title="Courses in a list">
+  </apex:dataList>
+  </apex:pageBlock>
+  <apex:pageBlock title="Data Table">
+  </apex:pageBlock>
+  <apex:pageBlock title="Page Block Table">
+  </apex:pageBlock>
+</apex:page>

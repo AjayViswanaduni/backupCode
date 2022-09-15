@@ -1,0 +1,15 @@
+<aura:component >
+    <aura:attribute name="Name" type="string" default="Ajay"/>
+    <aura:attribute name="Phone" type="string" default="9885634248"/>
+    <aura:attribute name="Industry" type="string" default="Software"/>
+    <div style="margin-left:100;width:400px;margin-top:10px;padding:50px;">
+        <lightning:card title="Customer Details" iconName="standard:account">
+            <div style="padding:20px;">
+            <b>Name</b>: {!v.Name}<br/>
+            <b>Phone</b>: {!v.Phone}<br/>
+            <b>Industry</b>: {!v.Industry}<br/>
+                </div>
+        </lightning:card>
+    </div>
+    
+</aura:component>

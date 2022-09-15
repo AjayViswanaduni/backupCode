@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Template for:each">
+        <template for:each={cars} for:item="car">
+            <div key={car}> {car} </div>
+        </template>
+    </lightning-card>
+    <lightning-card title="Template Iterator">
+        <template iterator:ceo={ceoList}>
+            <div class="slds-var-m-around_medium" key={ceo.value.id}>
+                <ul class="slds-has-dividers_around-space">
+                    <div if:true={ceo.first}>
+                        Following is the list of top most companies and its CEO Names.
+                    </div>
+                    <li class="slds-item">
+                <strong>{ceo.value.company}</strong><br/>
+                {ceo.value.CEO}
+                <div if:true={ceo.last}>
+                    End of the List 
+                </div>
+            </li>
+            </ul>
+            </div>
+        </template>
+    </lightning-card>
+</template>

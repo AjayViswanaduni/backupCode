@@ -1,0 +1,13 @@
+<template>
+    <lightning-record-edit-form
+    record-id={recID}
+    object-api-name="Account">
+    <lightning-card title="Create Account" icon-name="standard:account">
+        
+  <lightning-input-field field-name="Name"></lightning-input-field>
+  <lightning-input-field field-name="Phone"></lightning-input-field>
+  <lightning-input-field field-name="Industry"></lightning-input-field>
+  <lightning-button label="Refresh" onclick={refreshAction}></lightning-button>
+</lightning-card>
+</lightning-record-edit-form>
+</template>

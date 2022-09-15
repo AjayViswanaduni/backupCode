@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Get Piclist Values by record type">
+        <div class="slds-var-p-around_medium">
+            <template if:true={ratingOptions}>
+            <lightning-combobox 
+            name="Rating" 
+            label="Rating" 
+            value={selectedRating} 
+            placeholder="select Rating"
+            options={ratingOptions}
+            onchange={handleChange}></lightning-combobox>
+            <p>selectedRating:{selectedRating}</p>
+        </template>
+        <template if:true={industryOptions}>
+        <lightning-combobox 
+            name="Industry" 
+            label="Industry" 
+            value={selectedIndustry} 
+            placeholder="select Industry"
+            options={industryOptions}
+            onchange={handleChange}></lightning-combobox>
+            <p>selectedIndustry:{selectedIndustry}</p>
+        </template>
+        </div>
+    </lightning-card>    
+</template>

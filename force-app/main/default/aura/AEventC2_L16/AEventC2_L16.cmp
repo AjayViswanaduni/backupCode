@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:handler event="c:AEvent2_L16" action="{!c.showAccount}"/>
+    <aura:attribute name="flag" type="boolean" default="false"/>
+    <aura:attribute name="accData" type="Account" default="{'sobjectType':'Account'}"/>
+    
+    <aura:if isTrue="{!v.flag}">
+        <div>
+        <b>Account Name</b>  :  {!v.accData.Name}<br/>
+        <b>Account Phone</b>  :  {!v.accData.Phone}<br/>
+        <b>Account Industry</b>  :  {!v.accData.Industry}<br/>
+        </div>
+    </aura:if>
+</aura:component>

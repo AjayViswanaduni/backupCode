@@ -1,0 +1,54 @@
+<apex:page controller="CLC_Controller" >
+ <apex:form >
+  <apex:pageBlock title="Course Details in Data List">
+  <apex:dataList var="crs" value="{!my_courses}">
+   <apex:outputText >{!crs.name} </apex:outputText> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <apex:outputText >{!crs.Duration__c}</apex:outputText>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <apex:outputText >{!crs.Fee__c}</apex:outputText>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <apex:outputText >{!crs.Mode_Of_Training__c}</apex:outputText>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </apex:dataList>
+  </apex:pageBlock>
+  <apex:pageBlock title="Course Details in Data Table">
+   <apex:pageblockButtons >
+     <apex:commandLink value="<Previous" action="{!previous}"/> &nbsp;&nbsp;&nbsp;&nbsp;
+    <apex:commandLink value="Next>" action="{!next}"/>
+    </apex:pageblockbuttons>
+  <apex:dataTable rows="20" border="2" cellspacing="2" cellpadding="2" var="crs" value="{!my_courses}">
+  <apex:column headerValue="Course Name">
+   <apex:outputText >{!crs.name}</apex:outputText> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   </apex:column>
+   <apex:column headerValue="Duration">
+   <apex:outputText >{!crs.Duration__c}</apex:outputText>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   </apex:column>
+   <apex:column headerValue="Fee">
+   <apex:outputText >{!crs.Fee__c}</apex:outputText>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   </apex:column>
+   <apex:column headerValue="Mode of Training">
+   <apex:outputText >{!crs.Mode_Of_Training__c}</apex:outputText>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   </apex:column>
+  </apex:dataTable>
+  </apex:pageBlock>
+  <apex:pageBlock title="Course Details in PageBlockTable" >
+  <apex:pageblockButtons >
+  <apex:commandLink value="<<First" action="{!first}"/>&nbsp;&nbsp;&nbsp;&nbsp;
+  <apex:commandLink value="<Previous" action="{!previous}"/>&nbsp;&nbsp;&nbsp;&nbsp;
+   <apex:commandLink value="Next>" action="{!next}"/>&nbsp;&nbsp;&nbsp;&nbsp;
+   <apex:commandLink value="Last>>" action="{!last}"/>&nbsp;&nbsp;&nbsp;&nbsp;
+    </apex:pageblockbuttons>
+  <apex:pageBlockTable rows="20" width="90%" border="2" cellspacing="2" cellpadding="2" var="crs" value="{!my_courses}">
+  <apex:column headerValue="Course Name">
+   <apex:outputText >{!crs.name}</apex:outputText> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   </apex:column>
+   <apex:column headerValue="Duration">
+   <apex:outputText >{!crs.Duration__c}</apex:outputText>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   </apex:column>
+   <apex:column headerValue="Fee">
+   <apex:outputText >{!crs.Fee__c}</apex:outputText>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   </apex:column>
+   <apex:column headerValue="Mode of Training">
+   <apex:outputText >{!crs.Mode_Of_Training__c}</apex:outputText>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   </apex:column>
+  </apex:pageBlockTable>
+  </apex:pageBlock>
+ </apex:form>
+</apex:page>

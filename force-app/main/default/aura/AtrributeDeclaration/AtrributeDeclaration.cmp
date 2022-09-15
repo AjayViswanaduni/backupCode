@@ -1,0 +1,34 @@
+<aura:component >
+    <aura:attribute type="String" name="Title" default="Customer Personal Details"/>
+    <aura:attribute type="String" name="FirstName" default="Ajay"/>
+    <aura:attribute type="String" name="LastName" default="Viswanaduni"/>
+    <aura:attribute type="String" name="Phone" default="98856343248"/>
+    <aura:attribute type="String" name="email" default="ajayviswanaduni4248@gmail.com"/>
+    <aura:attribute type="String" name="City" default="Tirupati"/>
+    <aura:attribute type="String" name="Country" default="India"/>
+    <aura:attribute type="String" name="CompanyDetails" default="SSS pvt ltd"/>
+    <div class="slds-m-left_x-small">
+    <br/><br/><br/>
+    <lightning:button label="Accounts" title="Click to view Accounts" variant="brand"/>
+    <lightning:button label="Contacts" title="Click to view Contacts" variant="brand-outline"  iconName="action:call" iconPosition="left"/>
+    <lightning:button label="Opportunities" title="Click to view Opportunities" variant="inverse"/>
+    <lightning:button label="Products" title="Click to view Products" variant="success"/>
+    <lightning:button label="Pricebook" title="Click to view Pricebook" variant="base"/>
+    <lightning:button label="Quote" title="Click to view Quote" variant="destructive"/>
+    <br/><br/><br/><br/>
+    <lightning:buttonGroup>
+    <lightning:button label="Accounts" title="Click to view Accounts"/>
+    <lightning:button label="Contacts" title="Click to view Contacts"/>
+        <lightning:button label="Opportunities" title="Click to view Opportunities"/>
+    <lightning:button label="Products" title="Click to view Products"/>
+    <lightning:button label="Pricebook" title="Click to view Pricebook"/>
+    <lightning:button label="Quote" title="Click to view Quote"/>
+    </lightning:buttonGroup>
+    <lightning:buttonMenu>
+        <lightning:menuItem label ="Save"/>
+        <lightning:menuItem label ="Edit"/>
+        <lightning:menuItem label ="Cancel"/>
+        <lightning:menuItem label ="Delete"/>
+    </lightning:buttonMenu>
+        </div>
+</aura:component>

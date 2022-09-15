@@ -1,0 +1,6 @@
+<apex:page controller="AccountClassForVF">
+ Name : {!name}<br/>
+ phone : {!phone}<br/>
+ Rating : {!rating}<br/>
+ Industry : {!Industry}
+</apex:page>

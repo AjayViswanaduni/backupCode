@@ -1,0 +1,82 @@
+<aura:component >
+    <div class="slds-m-left_x-large" style="width:1350px;">
+	<lightning:card iconName="standard:account" footer="@AjayViswanaduni" title="" 
+                    variant="base">
+        <aura:set attribute="title">
+            <div>
+           <b><u>Account</u></b>
+                <h1>New Account</h1>
+            </div>
+        </aura:set>
+       <aura:set attribute="actions">
+           <lightning:buttonGroup>
+           <lightning:button label="Save" iconName="utility:save" title="Click to Save the Account"/>
+           <lightning:button label="New" iconName="utility:add" title="Click to Create the Account"/>
+           <lightning:button label="Edit" iconName="utility:edit" title="Click to Edit the Account"/>
+           <lightning:button label="Cancel" iconName="utility:cancel_file_request" title="Click to Cancel the Account"/>
+           <lightning:button label="Delete" iconName="utility:delete" title="Click to Delete the Account"/>
+           <lightning:button label="Undelete" iconName="utility:undelete" title="Click to Undelete the Account"/>
+           </lightning:buttonGroup>
+           <lightning:buttonMenu title="More">
+            <lightning:menuItem  label ="Contact"/>
+            <lightning:menuItem label ="Opportunity"/>
+            <lightning:menuItem label ="Lead"/>
+            <lightning:menuItem label ="Quote"/>
+           </lightning:buttonMenu>
+        </aura:set>
+    		<div style="margin-left:5px;padding:5px;">
+                <table>
+                    <tr>
+                        <td>
+                            First Name
+                        </td>
+                        <td>
+                            Ajay
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Last name
+                        </td>
+                        <td>
+                            Viswanaduni
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Company
+                        </td>
+                        <td>
+                            SSS pvt ltd
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Phone
+                        </td>
+                        <td>
+                            +919885634248
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Country
+                        </td>
+                        <td>
+                            India
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            City
+                        </td>
+                        <td>
+                            Tirupati
+                        </td>
+                    </tr>
+                    
+                </table>
+                </div>
+    </lightning:card>
+        </div>
+</aura:component>

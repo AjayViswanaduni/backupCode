@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="searchCollege">
+    <aura:attribute name="lstAccounts" type="List"/>
+s    <aura:attribute name="myColumns" type="List"/>
+    <aura:attribute name="flag" type="boolean" default="false"/>
+    <aura:attribute name="IndustryKey" type="string"/>
+    
+    <lightning:card title="" iconName="standard:account">
+        <aura:set attribute="title" >
+        <p style="padding:10px;font-size:40px;">Accounts</p>
+        </aura:set>
+        <aura:set attribute="actions">
+            <lightning:button label="Search" onclick="{!c.showColleges}"/>    
+        </aura:set>
+        <lightning:input label="Enter College Name" value="{!v.IndustryKey}"/>
+    </lightning:card>
+    
+    <aura:if isTrue="{!v.flag}">
+        <lightning:dataTable 
+                             keyField="Id"
+                             columns="{!v.myColumns}"
+                             data="{!v.lstAccounts}"/>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="boolFlag" type="boolean" default="false"/>
+    <c:EventRevisionChild/>
+    <aura:handler name="first" event="c:EventRevision" action="{!c.submit}"/>
+    <aura:if isTrue="{!v.boolFlag}">
+        <lightning:button label="Surprise!!"/>
+    </aura:if>
+</aura:component>

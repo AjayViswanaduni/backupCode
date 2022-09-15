@@ -1,0 +1,13 @@
+.THIS.details {
+    height:170px;
+    width:250px;
+    border:1px solid black;
+    border-radius:5px;
+    margin-left:100px;
+    margin-top:20px;
+    padding:10px;
+}
+.THIS.btnstyles{
+    margin-left:70px;
+    margin-top:50px;
+}

@@ -1,0 +1,28 @@
+<apex:page >
+    <apex:form >
+    	<apex:includeLightning />
+        <apex:commandButton value="Button 1"/>
+        <div id="one">
+            
+        </div>
+        
+        <script>
+        	$Lightning.use("c:lightningInVFRevision",
+                           function(){
+                               $Lightning.createComponent("lightning:button",
+                               		{
+                                     	"label":"Button 1",
+                                        "aura:id":"btn1"
+                                     },
+                                     "one",
+                                     function(cmp){
+                                       	console.log('testing...');  
+                                      }
+                               );
+                               
+                            }
+            );
+        </script>
+        
+    </apex:form>
+</apex:page>

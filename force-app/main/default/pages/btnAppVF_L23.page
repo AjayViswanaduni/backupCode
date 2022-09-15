@@ -1,0 +1,27 @@
+<apex:page >
+    <apex:form >
+        <apex:commandButton value="Classic Button1"/>
+        <apex:includeLightning />
+        <div id="one">
+            <apex:commandButton value="Classic Button2"/>
+        </div> 
+        
+        <script>
+        $Lightning.use("c:Lightning_InVF1_L23",
+                               function(){
+                               $Lightning.createComponent("lightning:button",
+                                                         {
+                                                         "label":"Lightning Button",
+                                                         "aura:id":"btn"
+                                                         },
+                                                          "one",
+                                                          function(cmp){
+                                                          console.log('Testing....');
+                                                          }
+                                                         );
+                               }
+                      );
+                       
+                       </script>
+    </apex:form>
+</apex:page>

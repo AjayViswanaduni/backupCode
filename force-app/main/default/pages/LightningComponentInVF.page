@@ -1,0 +1,27 @@
+<apex:page >
+    <apex:form >
+    <apex:includeLightning />
+        <div id="one">
+            
+        </div>
+       <script>
+        $Lightning.use("c:LightningComponentInVFApp_L24",
+                       function(){
+                       $Lightning.createComponent("c:LightningComponentInVF_L24",
+                                                  {
+                                                      "name":"Salesforce",
+                                                      "phone":"1234567890",
+                                                      "city":"Newyork",
+                                                      "country":"US"
+                                                  },
+                                                  "one",
+                                                  function(cmp){
+                                                  console.log('working');
+                                                  }
+                       );
+                       }
+        
+        );
+        </script>
+    </apex:form>
+</apex:page>

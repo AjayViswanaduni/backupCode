@@ -1,0 +1,40 @@
+<aura:component >
+    <aura:attribute name="flag" type="boolean"/>
+    <aura:attribute name="acc" type="Account" />
+    <aura:handler name="first" event="c:AccountFormEvent_L14" action="{!c.displayData}"/>
+    <c:AccountFormUsingEvent_L14 />
+	 <aura:if isTrue="{!v.flag}">
+    	<div style="margin-left:100px;margin-top:10px;border:1px solid black;width:500px;">
+            <lightning:card title="Customer Details" iconName ="standard:account">
+               	<div style="padding:20px;">
+                    <table>
+                    	<tr>
+                        	<td width="100px;">
+                            	<b>Name</b>
+                            </td>
+                            <td width="100px;">
+                            	{!v.acc.Name}
+                            </td>
+                        </tr>
+                        <tr>
+                        	<td>
+                            	<b>Phone</b>
+                            </td>
+                            <td>
+                            	{!v.acc.Phone}
+                            </td>
+                        </tr>
+                        <tr>
+                        	<td>
+                            	<b>Industry</b>
+                            </td>
+                            <td>
+                            	{!v.acc.Industry}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </lightning:card>
+        </div>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute type = "Integer" name= "num1" default= "88" />
+    <aura:attribute type = "Integer" name= "num2" default= "88" />
+    <aura:attribute type="Boolean" name= "status" default= "true" />
+    <aura:if isTrue= "{!(v.num1 > v.num2)}" >
+        num1 is greater than num2
+    <aura:set attribute="else">
+         <aura:if isTrue= "{!(v.num2 > v.num1)}" >
+        num2 is greater than num1
+        <aura:set attribute="else">
+           Both num1 and num2 are equal
+        </aura:set>
+        </aura:if>
+    </aura:set>
+    </aura:if>
+</aura:component>

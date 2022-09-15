@@ -1,0 +1,9 @@
+<apex:page controller="HttpProtocol">
+    <apex:form >
+    <apex:inputText value="{!ipAddress}"/>
+        <apex:commandButton value="Search" action="{!showService}"/><br/>
+        Status : {!statusCode}<br/>
+        Body   : {!body}<br/>
+        Data   : {!data}
+    </apex:form>
+</apex:page>

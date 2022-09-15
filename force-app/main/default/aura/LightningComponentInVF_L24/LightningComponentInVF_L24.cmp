@@ -1,0 +1,19 @@
+<aura:component >
+    <aura:attribute name="name" type="string" />
+    <aura:attribute name="phone" type="string"/>
+    <aura:attribute name="city" type="string"/>
+    <aura:attribute name="country" type="string"/>
+    
+    <div style="margin-left:100px;width:500px;border:1px solid black;margin-top:50px;">
+    	<lightning:card title="New Customer" iconName="standard:account">
+        	<div style="padding:20px;">
+            	<table>
+                	<tr><td>Name</td><td>{!v.name}</td></tr>
+                    <tr><td>Phone</td><td>{!v.phone}</td></tr>
+                    <tr><td>City</td><td>{!v.city}</td></tr>
+                    <tr><td>Country</td><td>{!v.country}</td></tr>
+                </table>
+            </div>
+        </lightning:card>
+    </div>
+</aura:component>

@@ -1,0 +1,18 @@
+<aura:component controller="Create_course_Output">
+    <aura:registerEvent name="first" type="c:Event3"/>
+    <aura:attribute name="crs" type="Course__c" default="{'sobjectType':'Course__c'}" />
+    <div style="margin-left:100px;margin-top:100px;border:1px solid black;width:500px;">
+    	<lightning:card title="New Course" iconName ="standard:account">
+            <aura:set attribute="actions">  
+                <lightning:button label="Save" onclick="{!c.doSave}"/>
+            	<lightning:button label="Cancel" onclick="{!c.doCancel}"/>
+            </aura:set>
+            <div style="padding:20px;"> 
+            	<lightning:input label="Course Name" value="{!v.crs.Name}"/>
+                <lightning:input label="Fee" value="{!v.crs.Fee__c}"/>
+                <lightning:input label="Duration" value="{!v.crs.Duration__c}"/>
+                <lightning:input label="Mode of Training" value="{!v.crs.Mode_Of_Training__c}"/>
+            </div>
+        </lightning:card> 
+    </div> 
+</aura:component>

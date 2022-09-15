@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<lightning:recordViewForm recordId="{!v.recordId}" objectApiName="Account">
+        <lightning:card title="Account Details from recordViewForm" iconName="standard:account">
+        <lightning:outputField fieldName="Name"/>
+        <lightning:outputField fieldName="Phone"/>
+        <lightning:outputField fieldName="Industry"/>
+            </lightning:card>
+    </lightning:recordViewForm>
+</aura:component>

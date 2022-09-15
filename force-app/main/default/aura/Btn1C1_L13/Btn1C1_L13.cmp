@@ -1,0 +1,4 @@
+<aura:component >
+    <aura:registerEvent name="event" type="c:Event2_L13"/>
+    <lightning:button label="Next" onclick="{!c.next}"/>
+</aura:component>

@@ -1,0 +1,33 @@
+<template>
+    <!-- <lightning-card title="My First LWC Component">
+        <b>Hi, This is my first Component</b>
+    </lightning-card>
+     Name       : {name}<br/>
+     Age        : {age}<br/>
+     Phone      : {phone}<br/>
+     Id         : {id}<br/>
+    <lightning-button label="Button 1" icon-name="standard:account" onclick={doAction}></lightning-button>
+
+    <lightning-layout>
+        <lightning-layout-item size="6">
+            <lightning-input label="Employee Name" type="text" name="myname" value={myname}></lightning-input>
+            <lightning-input label="Employee Phone" type="text" name="myphone" value={myphone}></lightning-input>
+            <lightning-input label="Employee Salary" type="number" name="mysalary" value={mysalary}></lightning-input>
+            <lightning-input label="Employee Date of Birth" type="date" name="mydob" value={mydob}></lightning-input>
+            <lightning-input label="Final sal" type="number" name="finalsal" value={finalsal}></lightning-input>
+        </lightning-layout-item>
+    </lightning-layout> -->
+<br/>
+<br/>
+    <lightning-layout>
+        <lightning-layout-item size="8">
+            <lightning-input label="Enter Num1" name="numb1"  onchange={callme}></lightning-input>
+            <lightning-input label="Enter Num2" name="numb2"  onchange={callme}></lightning-input>
+        </lightning-layout-item>
+        <lightning-button label="Add" onclick={addAction}></lightning-button>
+        <lightning-button label="Substraction" onclick={subAction}></lightning-button>
+        <lightning-button label="Multiplication" onclick={mulAction}></lightning-button>
+        <lightning-button label="Division" onclick={divAction}></lightning-button>
+    </lightning-layout>
+    Result :    {resultValue}
+</template>

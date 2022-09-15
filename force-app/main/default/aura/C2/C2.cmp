@@ -1,0 +1,4 @@
+<aura:component >
+    <c:C1 />
+    <aura:handler name="first" event="c:Event1" action="{!c.submit}" />
+</aura:component>

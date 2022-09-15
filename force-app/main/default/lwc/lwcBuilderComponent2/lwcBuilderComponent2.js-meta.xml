@@ -1,0 +1,39 @@
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>52.0</apiVersion>
+	<isExposed>true</isExposed>
+	<masterLabel>Lwc builder component</masterLabel>
+	<description>This component is built using LWC Builder</description>
+	<targets>
+		<target>lightning__AppPage</target>
+		<target>lightning__HomePage</target>
+		<target>lightning__RecordPage</target>
+		<target>lightning__UtilityBar</target>
+		<target>lightning__FlowScreen</target>
+		<target>lightning__Tab</target>
+	</targets>
+	<targetConfigs>
+		<targetConfig targets="lightning__AppPage">
+			<property name="title" type="String" default="Hi, this is my second Component" description="Title of the component" label="Title" placeholder="Enter the title of the component" required="true" />
+			<property name="show" type="Boolean" description="click this to show the title" label="Show" />
+			<supportedFormFactors>
+				<supportedFormFactor type="Small"/>
+				<supportedFormFactor type="Large"/>
+			</supportedFormFactors>
+		</targetConfig>
+		<targetConfig targets="lightning__HomePage">
+			<property name="title" type="String" default="Hi, this is my second Component" description="Title of the component" label="Title" placeholder="Enter the title of the component" required="true" />
+			<property name="show" type="Boolean" description="click this to show the title" label="Show" />
+			<supportedFormFactors>
+				<supportedFormFactor type="Large"/>
+			</supportedFormFactors>
+		</targetConfig>
+		<targetConfig targets="lightning__RecordPage">
+			<property name="title" type="String" default="Hi, this is my second Component" description="Title of the component" label="Title" placeholder="Enter the title of the component" required="true" />
+			<property name="show" type="Boolean" default="false" description="click this to show the title" label="Show" />
+			<supportedFormFactors>
+				<supportedFormFactor type="Small"/>
+				<supportedFormFactor type="Large"/>
+			</supportedFormFactors>
+		</targetConfig>
+	</targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,46 @@
+<aura:component >
+    <aura:attribute name="flag" type="boolean"/>
+    <aura:attribute name="crs" type="Course__c" />
+    <aura:handler name="first" event="c:Event3" action="{!c.displayData}"/>
+    <c:Event3C1 />
+	 <aura:if isTrue="{!v.flag}">
+    	<div style="margin-left:100px;margin-top:10px;border:1px solid black;width:500px;">
+            <lightning:card title="Course Details" iconName ="standard:account">
+               	<div style="padding:20px;">
+                    <table>
+                    	<tr>
+                        	<td width="100px;">
+                            	<b>Name</b>
+                            </td>
+                            <td width="100px;">
+                            	{!v.crs.Name}
+                            </td>
+                        </tr>
+                        <tr>
+                        	<td>
+                            	<b>Fee</b>
+                            </td>
+                            <td>
+                            	{!v.crs.Fee__c}
+                            </td>
+                        </tr>
+                        <tr>
+                        	<td>
+                            	<b>Duration</b>
+                            </td>
+                            <td>
+                            	{!v.crs.Duration__c}
+                            </td>
+                            <td>
+                            	<b>Mode Of Training</b>
+                            </td>
+                            <td>
+                            	{!v.crs.Mode_Of_Training__c}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </lightning:card>
+        </div>
+    </aura:if>
+</aura:component>

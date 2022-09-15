@@ -1,0 +1,66 @@
+<apex:page tabStyle="Department__c">
+<apex:form >
+    <apex:pageBlock title="Student Registration Form">
+   <apex:pageBlockSection title="Personal Details" columns="1">
+   <apex:pageBlockSectionItem >
+   First Name: <apex:inputText />
+   </apex:pageBlockSectionItem>
+   <apex:pageBlockSectionItem >
+   Last Name: <apex:inputText />
+   </apex:pageBlockSectionItem>
+   <apex:pageblockSectionItem >
+   Gender: Male<apex:inputCheckbox /> 
+   </apex:pageblockSectionItem>
+   <apex:pageBlockSectionItem >
+   Female<apex:inputCheckbox /> 
+   </apex:pageBlockSectionItem>
+   
+   <apex:pageBlockSectionItem >
+   Mobile No:+91<apex:inputText />
+   </apex:pageBlockSectionItem>
+   <apex:pageBlockSectionItem >
+   E-mail ID:<apex:inputText />
+   </apex:pageBlockSectionItem>
+   <apex:pageBlockSectionItem >
+   Hobbies:<apex:inputText />
+   </apex:pageBlockSectionItem>
+   <apex:pageBlockSectionItem >
+   Address: <apex:inputTextarea />
+   </apex:pageBlockSectionItem>
+   </apex:pageBlockSection>
+   <apex:pageBlockSection title="Education Details" columns="4">
+ <apex:outputLabel >Highest Degree:</apex:outputLabel>
+ <apex:pageBlockSectionItem >
+ Qualification Name: <apex:inputText />
+   </apex:pageBlockSectionItem>
+   <apex:pageBlockSectionItem >
+    College/Institute Name:<apex:inputText />
+   </apex:pageBlockSectionItem>
+   <apex:pageBlockSectionItem >
+   No of Arrears: <apex:inputText />
+   </apex:pageBlockSectionItem>
+   <apex:pageBlockSectionItem >
+   Percentage Obtained: <apex:inputText />
+   </apex:pageBlockSectionItem>
+   <apex:pageBlockSectionItem >
+   Year of passing<apex:inputText />
+   </apex:pageBlockSectionItem>
+   </apex:pageBlockSection>
+   <apex:pageBlockSection > SSC Details:
+   <apex:pageBlockSectionItem >
+   School Name: <apex:inputText />
+   </apex:pageBlockSectionItem>
+   <apex:pageBlockSectionItem >
+   GPA: <apex:inputText />
+   </apex:pageBlockSectionItem>
+   <apex:pageBlockSectionItem >
+   Year of passing<apex:inputText />
+   </apex:pageBlockSectionItem>
+   <apex:pageBlockSectionItem >
+   <apex:commandButton value="Submit"/>
+   <apex:commandButton value="Cancel"/>
+   </apex:pageBlockSectionItem>
+   </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,15 @@
+<aura:component controller="AccountEvent_L15">
+    <aura:registerEvent name="first" type="c:AccountEvent_L15"/>
+    <aura:attribute name="acc" type="Account" default="{'sobjectType':'Account'}"/>
+    <div style="margin-left:100px;margin-top:100px;width:600px;border:1px solid black;">
+     <lightning:card title=" Create Account" iconName="standard:account">
+     <aura:set attribute="actions">
+         <lightning:button label="Save" onclick="{!c.save}"/>
+         <lightning:button label="Cancel" onclick="{!c.cancel}"/>
+     </aura:set>   
+         <lightning:input label="Account Name" value="{!v.acc.Name}"/>
+         <lightning:input label="Account Phone" value="{!v.acc.Phone}"/>
+         <lightning:input label="Account Industry" value="{!v.acc.Industry}"/>
+     </lightning:card>
+    </div>
+</aura:component>

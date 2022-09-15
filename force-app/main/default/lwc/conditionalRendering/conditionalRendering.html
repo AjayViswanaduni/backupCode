@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Salesforce CEO">
+        <template if:true={isVisible}>
+            <div class="slds-p-around_medium">
+            {name}<br/>
+            {details}
+        </div> 
+        </template>
+        <template if:false={isVisible}>
+           Click the button to see the details
+        </template>
+        <lightning-button slot="actions" label="Show/Hide" onclick={showCEO}></lightning-button>
+    </lightning-card>
+</template>

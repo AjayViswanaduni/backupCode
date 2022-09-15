@@ -1,0 +1,26 @@
+<apex:page >
+    <apex:form >
+        <apex:includeLightning />
+        <div id="one">
+            
+        </div> 
+        
+        <script>
+        $Lightning.use("c:LightningCardInVF_L24",
+                               function(){
+                               $Lightning.createComponent("lightning:card",
+                                                         {
+                                                         "title":"Lightning card in Classic page",
+                                                         "iconName":"standard:account"
+                                                         },
+                                                          "one",
+                                                          function(cmp){
+                                                          console.log('Testing....');
+                                                          }
+                                                         );
+                               }
+                      );
+                       
+                       </script>
+    </apex:form>
+</apex:page>

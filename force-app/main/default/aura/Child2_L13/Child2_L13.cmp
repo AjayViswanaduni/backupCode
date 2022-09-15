@@ -1,0 +1,4 @@
+<aura:component >
+    <c:Child1_L13 />  <!-- CHILD COMPONENT OF Child2 is Child1 -->
+    <aura:handler name="first" event="c:Event1" action="{!c.submit}"/>
+</aura:component>

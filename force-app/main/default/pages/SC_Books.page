@@ -1,0 +1,37 @@
+<apex:page standardController="Book__c">
+  <apex:form >
+   <apex:pageBlock >
+    <apex:pageBlockButtons >
+     <apex:commandButton value="Save" action="{!save}"/>
+      <apex:commandButton value="Save & New" action="{!quicksave}"/>
+       <apex:commandButton value="Cancel" action="{!cancel}"/>
+        <apex:commandButton value="Edit" action="{!edit}"/>
+         <apex:commandButton value="Delete" action="{!delete}"/>
+          </apex:pageBlockButtons>
+           <apex:pageBlockSection columns="1">
+           <apex:pageBlockSectionItem >
+           <apex:outputText >Book Name</apex:outputText>
+           <apex:inputField value="{!Book__c.Book_Name__c}"/>
+           </apex:pageBlockSectionItem>
+           <apex:pageBlockSectionItem >
+           <apex:outputText >Author Name</apex:outputText>
+           <apex:inputField value="{!Book__c.Author_Name__c}"/>
+           </apex:pageBlockSectionItem>
+           <apex:pageBlockSectionItem >
+           <apex:outputText >Subject Name</apex:outputText>
+           <apex:inputField value="{!Book__c.Subject_Name__c}"/>
+           </apex:pageBlockSectionItem>
+           <apex:pageBlockSectionItem >
+           <apex:outputText >Price</apex:outputText>
+           <apex:inputField value="{!Book__c.Price__c}"/>
+           </apex:pageBlockSectionItem>
+           <apex:pageBlockSectionItem >
+           <apex:outputText >Edition</apex:outputText>
+           <apex:inputField value="{!Book__c.Edition__c}"/>
+           </apex:pageBlockSectionItem>
+           
+           </apex:pageBlockSection>
+     
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>

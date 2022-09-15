@@ -1,0 +1,15 @@
+<aura:component controller="LightningInVF2_L25">
+     <aura:attribute name="searchParam" type="string"/>
+    <aura:attribute name="lstAccounts" type="List"/>
+    <aura:attribute name="myColumns" type="List"/>
+    <aura:attribute name="flag" type="boolean" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}"/>
+    <aura:if isTrue="{!v.flag}">
+    <lightning:dataTable
+                         keyField="Id"
+                         data="{!v.lstAccounts}"
+                         columns="{!v.myColumns}"/>
+        </aura:if>
+
+</aura:component>

@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute type="string" name="message"></aura:attribute>
+<lightning:card title="Aura Lightning Card">
+<aura:set attribute="actions">
+    <lightning:button label="Save"></lightning:button>
+    <lightning:button label="Cancel"></lightning:button>
+</aura:set>
+<div>{!v.message}</div>
+<div class="slds-p-around_medium">
+    <c:lwcAuraCoexistence onsendmsg="{!c.lwcHandler}" title="This text is from Aura and trying to send it to LWC"></c:lwcAuraCoexistence>
+</div>
+</lightning:card>
+</aura:component>

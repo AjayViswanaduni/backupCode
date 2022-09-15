@@ -1,0 +1,8 @@
+<apex:page controller="HttpPostalCode">
+    <apex:form >
+    <apex:inputText value="{!pincode}"/>
+    <apex:commandButton value="submit" action="{!getPostalData}" reRender="frm"/>
+        <br/><br/>
+        {!body}
+    </apex:form>
+</apex:page>

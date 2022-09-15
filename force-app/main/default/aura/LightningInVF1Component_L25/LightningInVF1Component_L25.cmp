@@ -1,0 +1,11 @@
+<aura:component controller="LightningInVF1_L25">
+    <aura:attribute name="lstAccounts" type="List"/>
+    <aura:attribute name="myColumns" type="List"/>
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}"/>
+   
+    <lightning:dataTable
+                         keyField="Id"
+                         data="{!v.lstAccounts}"
+                         columns="{!v.myColumns}"/>
+
+</aura:component>

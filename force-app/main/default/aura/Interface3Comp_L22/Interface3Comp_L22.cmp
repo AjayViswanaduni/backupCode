@@ -1,0 +1,23 @@
+<aura:component implements="c:Interface3_L22">
+    
+    <aura:handler name="first" event="c:Interface3Event_L22" action="{!c.invoke}"/>
+    
+	<aura:attribute name="myName" type="string"/>
+    <aura:attribute name="myPhone" type="string"/>
+    <aura:attribute name="myCity" type="string"/>
+    <aura:attribute name="myCountry" type="string"/>
+    <aura:attribute name="flag" type="boolean" default="false"/>
+    <lightning:button label="Show Details" onclick="{!c.getDetails}"/>
+    
+    <aura:if isTrue ="{!v.flag}">
+        
+    <lightning:card title="Details" iconName="standard:account">
+        <div style="padding:10px;width:400px;">
+        <b>Name</b>    : {!v.myName}<br/>
+        <b>Phone</b>    : {!v.myPhone}<br/>
+        <b>City</b>    : {!v.myCity}<br/>
+        <b>Country</b>    : {!v.myCountry}<br/>
+          </div>  
+    </lightning:card>
+    </aura:if>
+</aura:component>

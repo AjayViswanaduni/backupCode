@@ -1,0 +1,7 @@
+<aura:component controller ="ApexServerController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute type="String" name="Stud_name" /> <br/>
+    <lightning:input type="text" value="{!v.Stud_name}" placeholder = "Enter the Student name" /><br/>
+    <aura:attribute type="String" name="mesg" default = "Waiting..." />
+    <lightning:button label="Server Call" onclick = "{!c.clientMtd}" /><br/>
+    {!v.mesg}
+</aura:component>

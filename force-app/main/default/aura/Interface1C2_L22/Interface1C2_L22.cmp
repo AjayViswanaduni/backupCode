@@ -1,0 +1,15 @@
+<aura:component implements="c:Interface1_L22">
+    <aura:attribute name="Country" type="string"/>
+        <aura:handler name="init" value="{!this}" action="{!c.showCompanyDetails}"/>
+    <div style="margin-left:500px;padding:5px;width:500px;margin-top:10px;">
+        <lightning:card title="Company Details" iconName="standard:account">
+                    <div style="padding:10px;">
+            <b>Name </b>     : {!v.Name}<br/>
+            <b>Phone </b>    : {!v.Phone}<br/>
+            <b>Email </b>    : {!v.Email}<br/>
+            <b>Country </b>  : {!v.Country}<br/>
+            <b>Rating </b>   : {!v.Rating}
+                        </div>
+        </lightning:card>
+    </div>
+</aura:component>

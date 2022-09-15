@@ -1,0 +1,23 @@
+<aura:component >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:card title="" iconName="standard:account" footer="@AjayViswanaduni">
+        <aura:set attribute="title" >
+            <b><u>Lightning Card</u></b>
+        </aura:set>
+        <aura:set attribute="actions">
+            <lightning:button label="Single Button" onclick="{!someAction}"></lightning:button>
+            <lightning:buttonMenu alternativeText="Show menu">
+                <lightning:menuItem value="MenuItemOne" label="Menu Item One" />
+                <lightning:menuItem value="MenuItemTwo" label="Menu Item Two" />
+                <lightning:menuItem value="MenuItemThree" label="Menu Item Three" />
+                <lightning:menuItem value="MenuItemFour" label="Menu Item Four" />
+            </lightning:buttonMenu>
+            <lightning:buttonGroup>
+                <lightning:button label="Refresh" />
+                <lightning:button label="Edit" />
+                <lightning:button label="Save" />
+            </lightning:buttonGroup>
+        </aura:set>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </lightning:card>
+</aura:component>

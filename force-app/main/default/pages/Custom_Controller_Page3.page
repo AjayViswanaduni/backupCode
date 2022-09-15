@@ -1,0 +1,26 @@
+<apex:page controller="CC3">
+ <apex:form >
+  <apex:pageBlock >
+   <apex:pageblockButtons >
+    <apex:commandButton value="Addition"  action="{!addition}"/>
+    <apex:commandButton value="Substraction"  action="{!diff}"/>
+    <apex:commandButton value="Product"  action="{!product}"/>
+    <apex:commandButton value="Division"  action="{!division}"/>
+    </apex:pageblockButtons>
+    <apex:pageBlockSection columns="1" >
+     <apex:pageBlockSectionItem >
+      <apex:outputText >Enter First Value</apex:outputText>
+      <apex:inputText value="{!num1}"/>
+     </apex:pageBlockSectionItem>
+     <apex:pageBlockSectionItem >
+     <apex:outputText >Enter Second Value</apex:outputText>
+      <apex:inputText value="{!num2}"/>
+     </apex:pageBlockSectionItem>
+     <apex:pageBlockSectionItem >
+     <apex:outputText >The Result is</apex:outputText>
+      <apex:inputText value="{!result}"/>
+     </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+  </apex:pageBlock>
+ </apex:form>
+</apex:page>

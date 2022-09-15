@@ -1,0 +1,11 @@
+<aura:component controller="recentRecordsController" implements="force:appHostable,force:hasSobjectName,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="myColumns" type="List"/>
+    <aura:attribute name="lstRecords" type="List"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <div style="width:500px;">
+    <lightning:dataTable 
+                         keyField="ID"
+                         data="{!v.lstRecords}"
+                         columns="{!v.myColumns}"/>
+        </div>
+</aura:component>

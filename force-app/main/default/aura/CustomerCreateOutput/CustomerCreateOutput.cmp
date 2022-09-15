@@ -1,0 +1,31 @@
+<aura:component controller="Create_course_Output">
+    <aura:attribute name="Course" type="Course__c" default="{'sobjectType':'Course__c'}"/>
+    <aura:attribute name="flag" type="boolean" default="false" />
+    <div style="width:600px;">
+        <lightning:card title="Create Course" iconName="standard:account" >
+            <aura:set attribute="actions">
+                <lightning:button label="Save" onclick="{!c.doSave}" />
+                <lightning:button label="Cancel" onclick="{!c.doCancel}" />
+            </aura:set>
+           <div style="padding=50px;">
+               <lightning:input label="Name" value="{!v.Course.Name}" />
+               <lightning:input label="Duration" value="{!v.Course.Duration__c}" />
+               <lightning:input label="Fee" value="{!v.Course.Fee__c}" />
+               <lightning:input label="Mode of Training" value="{!v.Course.Mode_Of_Training__c}" />
+            </div>
+        </lightning:card>
+    </div>
+    <br/>
+    <aura:if isTrue="{!v.flag}" >
+        <div >
+             <lightning:card title="Course Details" iconName="standard:account" >
+                 <div style="padding=50px;">
+                     <b>Course Name</b>           :   {!v.Course.Name}  <br/>
+                      <b>Course Duration</b>      :   {!v.Course.Duration__c}  <br/>
+                      <b>Course Fee</b>           :   {!v.Course.Fee__c}  <br/>
+                      <b>Mode of Training</b>     :   {!v.Course.Mode_Of_Training__c}
+                      </div>
+             </lightning:card>
+            </div>
+        </aura:if>
+</aura:component>

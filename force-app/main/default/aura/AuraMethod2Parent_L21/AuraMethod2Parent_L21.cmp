@@ -1,0 +1,14 @@
+<aura:component controller="AccountManager_AuraMethod2_L21">
+    <aura:attribute name="acc" type="Account" default="{'sobjectType':'Account'}"/>
+    
+    <lightning:card title="Account Details" iconName="standard:account">
+    <aura:set attribute="actions">
+        <lightning:button label="Save" onclick="{!c.save}"/>
+        <lightning:button label="Cancel" onclick="{!c.cancel}"/>
+    </aura:set>
+        <lightning:input placeholder="Enter Name" value="{!v.acc.Name}"/>
+        <lightning:input placeholder="Enter Phone Number" value="{!v.acc.Phone}"/>
+        <lightning:input placeholder="Enter the Industry" value="{!v.acc.Industry}"/>
+    </lightning:card>
+    <c:AuraMethod2Child_L21 aura:id="one"/>
+</aura:component>

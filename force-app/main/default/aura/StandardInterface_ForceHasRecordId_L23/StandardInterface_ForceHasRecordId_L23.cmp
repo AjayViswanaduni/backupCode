@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSobjectName" controller="contactCountController_L23" access="global" >
+    <aura:attribute name="contactCount" type="Integer"/>
+    <aura:attribute name="flag" type="boolean" default="false"/>
+    <aura:attribute name="boolflag" type="boolean" default="true"/>
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}"/>
+    <aura:if isTrue="{!v.boolflag}">
+    <div style="width:500px;background-color:white;font-size:20px;">
+    <p style="color:green;">Number of Contacts  :  {!v.contactCount}</p>
+    </div>
+        </aura:if>
+    <aura:if isTrue="{!v.flag}">
+        <div style="width:500px;background-color:white;font-size:20px;">
+    <p style="color:red;"> No Contacts Found(0)</p>
+          </div>  
+    </aura:if>
+</aura:component>

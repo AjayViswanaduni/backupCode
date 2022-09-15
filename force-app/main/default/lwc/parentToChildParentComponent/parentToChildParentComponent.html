@@ -1,0 +1,19 @@
+<template>
+    <c-parent-to-child-child-component
+        message = "YO YO!! I got the data.">
+    </c-parent-to-child-child-component>
+    <div class="slds-var-m-bottom_medium"></div>
+    <c-caurosel-child-component carousel-details={carouselData}></c-caurosel-child-component>
+    <div class="slds-var-m-bottom_medium"></div>
+    <lightning-card title="Progress Bar">
+        <lightning-input  label="Enter Percentage" type="number" onkeyup={changeHandler} value={percentage}></lightning-input>
+        <c-progress-bar-child-component 
+        bar-percentage={percentage}>
+        </c-progress-bar-child-component>
+    </lightning-card>
+
+    
+    <div class="slds-var-m-bottom_medium"></div>
+    <lightning-button variant="brand" label="Reset Slider" title="Reset Slider" onclick={handleClick}></lightning-button>
+    <c-slider-child-component></c-slider-child-component>
+</template>

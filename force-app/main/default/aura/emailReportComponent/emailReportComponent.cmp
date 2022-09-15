@@ -1,0 +1,11 @@
+<aura:component controller="EmailWithTemplate" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="currentID" type="string" default="{!v.recordId}"/>
+    <aura:attribute name="flag" type="boolean" default="true"/>
+    <aura:attribute name="flag2" type="boolean" default="false"/>
+    <aura:if isTrue="{!v.flag}">
+        <lightning:button label="Send Email" onclick="{!c.sendEmail}"/>
+    </aura:if>
+    <aura:if isTrue="{!v.flag2}">
+    <b><u>Email Sent Succesfully</u></b>
+    </aura:if>
+</aura:component>

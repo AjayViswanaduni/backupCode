@@ -1,0 +1,22 @@
+<apex:page >
+    <apex:form >
+    <apex:includeLightning />
+        <div id="one">
+            
+        </div>
+        <script>
+        $Lightning.use("c:LightningInVF1App_L25",
+                       function(){
+                       $Lightning.createComponent("c:LightningInVF1Component_L25",
+                                                  {},
+                                                  "one",
+                                                  function(cmp){
+                                                  alert('Succesful');
+                                                  }
+                       
+                       );
+                       }
+        );
+        </script>
+    </apex:form>
+</apex:page>

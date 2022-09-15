@@ -1,0 +1,34 @@
+<apex:page id="p1">
+    <apex:form id="f1">
+        <div style="margin-left:100px;width:500px;margin-top:10px;">
+            <table>
+                <tr>
+                    <td><b>Industry</b></td>
+                    <td><apex:inputText id="searchKey"/></td>
+                    <td><input type="button" label="Search" value="Search" onclick="invokeMe();"/></td>
+                </tr>
+            </table>
+        </div>
+        <apex:includeLightning />
+        <div id="one">
+            
+        </div>
+        <script>
+        function invokeMe(){
+            var IndustryKey = document.getElementById('p1:f1:searchKey').value;
+            $Lightning.use("c:LightningInVF2Appt_L25",
+                           function(){
+                               $Lightning.createComponent("c:LightningInVF2Component_L25",
+                                                          {"searchParam":IndustryKey},
+                                                          "one",
+                                                          function(cmp){
+                                                            
+                                                          }
+                                                          
+                                                         );
+                           }
+                          );
+        }     
+        </script>
+    </apex:form>
+</apex:page>

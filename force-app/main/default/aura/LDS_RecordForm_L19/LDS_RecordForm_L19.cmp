@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="fields" type="List" default="['Name','Phone','Industry']"/>
+    <!--<lightning:recordForm recordId="0015j00000UCnmTAAT" objectApiName="Account" mode="edit" layoutType="Compact">-->
+    <!--<div style="margin-left:100px;margin-top:100px;width:500px;padding:10px;height:500px;">-->
+    <lightning:card title="Account recordForm with edit Mode">
+    <lightning:recordForm recordId="{!v.recordId}" objectApiName="Account" mode="edit" fields="{!v.fields}"/>
+    </lightning:card>
+    
+    </aura:component>

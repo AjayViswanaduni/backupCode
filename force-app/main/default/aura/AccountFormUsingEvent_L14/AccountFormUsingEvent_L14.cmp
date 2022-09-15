@@ -1,0 +1,18 @@
+<aura:component controller="CustomerRegistrationCls">  
+    <aura:registerEvent name="first" type="c:AccountFormEvent_L14"/>
+	<aura:attribute name="acc" type="Account" default="{'sobjectType':'Account'}"/>
+    
+    <div style="margin-left:100px;margin-top:100px;border:1px solid black;width:500px;">
+    	<lightning:card title="New Customer" iconName ="standard:account">
+            <aura:set attribute="actions">  
+                <lightning:button label="Save" onclick="{!c.doSave}"/>
+            	<lightning:button label="Cancel" onclick="{!c.doCancel}"/>
+            </aura:set>
+            <div style="padding:20px;"> 
+            	<lightning:input label="Name" value="{!v.acc.Name}"/>
+                <lightning:input label="Phone" value="{!v.acc.Phone}"/>
+                <lightning:input label="Industry" value="{!v.acc.Industry}"/>
+            </div>
+        </lightning:card> 
+    </div> 
+</aura:component>

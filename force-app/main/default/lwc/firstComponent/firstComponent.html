@@ -1,0 +1,12 @@
+<template>
+<lightning-card title="Two way Data Binding">
+<lightning-input type="text" onkeyup={changeHandler}>
+</lightning-input>
+Myself {fullName} and I am from {place}
+</lightning-card>
+<lightning-card title="@Track">
+    <lightning-input type="text" onkeyup={trackHandler}>
+    </lightning-input>
+    My city is {address.city}
+    </lightning-card>
+</template>

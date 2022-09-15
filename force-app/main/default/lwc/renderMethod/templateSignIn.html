@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="SignIn form" icon-name="custom:custom14">
+        <h2>Enter the Details to SignIn</h2>
+        <lightning-input label="Email Id" type="email"></lightning-input>
+        <lightning-input label="Password" type="password"></lightning-input>
+        <lightning-button
+        variant="invert"
+        label="Back"
+        onclick={changeHandler}
+        class="slds-m-left_x-small"></lightning-button>
+        <lightning-button
+        variant="success"
+        label="SignIn"
+        onclick={submitHandler}
+        class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+</template>

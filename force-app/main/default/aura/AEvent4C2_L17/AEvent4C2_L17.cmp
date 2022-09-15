@@ -1,0 +1,13 @@
+<aura:component controller="AEvent4_L17">
+    <aura:attribute name="lstAccounts" type="List"/>
+    <aura:attribute name="myColumns" type="List"/>
+    <aura:attribute name="flag" type="boolean" default="false"/>
+    
+    <aura:handler event="c:AEvent4_L17" action="{!c.showData}"/>
+    <aura:if isTrue="{!v.flag}">
+    <lightning:dataTable
+                         keyField="Id"
+                         data="{!v.lstAccounts}"
+                         columns="{!v.myColumns}"/>
+    </aura:if>
+</aura:component>

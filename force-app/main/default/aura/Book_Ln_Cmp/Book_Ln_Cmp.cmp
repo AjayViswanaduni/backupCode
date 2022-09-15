@@ -1,0 +1,13 @@
+<aura:component controller = "Book_Ln_Class" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute type= "string" name="b_name"/>
+    <aura:attribute type= "string" name="b_author"/>
+    <aura:attribute type= "Decimal" name="b_price"/>
+    <aura:attribute type= "Decimal" name="b_edition"/>
+    
+     <lightning:input type="String" value="{!v.bn}" placeholder="Enter the Book Name"/> <br/>
+     <lightning:input type="String" value="{!v.ba}" placeholder="Enter the Book Author"/> <br/>
+     <lightning:input type="number" value="{!v.bp}" placeholder="Enter the Book Price"/> <br/>
+     <lightning:input type="number" value="{!v.be}" placeholder="Enter the Book Edition"/> <br/>
+    <lightning:button label="save" onclick="{!c.save}"/>
+    {!v.mesg}
+</aura:component>

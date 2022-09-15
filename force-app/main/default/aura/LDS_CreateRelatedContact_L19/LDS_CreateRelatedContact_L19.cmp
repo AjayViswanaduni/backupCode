@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,flexipage:availableForRecordHome,force:lightningQuickAction" access="global" >
+    <lightning:recordEditForm recordId="{!v.recordId}" objectApiName="Contact" onsubmit="{!c.someAction}">
+        <lightning:card title="Create related Contact from recordEditForm" iconName="standard:contact">
+            <aura:set attribute="actions">
+                <lightning:button label="Save" type="submit"/>
+            </aura:set>
+            <!--<lightning:outputField fieldName="AccountId"/>-->
+            <lightning:inputField fieldName="LastName"/>
+            <lightning:inputField fieldName="Email"/>
+            <lightning:inputField fieldName="MobilePhone"/>
+        </lightning:card>
+    </lightning:recordEditForm>
+</aura:component>

@@ -1,0 +1,17 @@
+<apex:page controller="WrapperExample">
+    <apex:form >
+     <apex:pageBlock title="Super Market List">
+       <apex:pageBlockTable value="{!WrapList}" var="Wrap">
+           <apex:column headerValue="Product Name">
+           <apex:outputText value="{!Wrap.pname}"/>
+           </apex:column>
+           <apex:column headerValue="Product Quality">
+           <apex:outputText value="{!Wrap.qty}"/>
+           </apex:column>
+           <apex:column headerValue="Product Price">
+           <apex:outputText value="{!Wrap.price}"/>
+           </apex:column>
+       </apex:pageBlockTable>
+     </apex:pageBlock>
+    </apex:form>
+</apex:page>

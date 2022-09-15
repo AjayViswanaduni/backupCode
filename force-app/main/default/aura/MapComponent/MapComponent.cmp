@@ -1,0 +1,12 @@
+<aura:component>
+    <aura:attribute name="mapMarkers" type="Object[]"/>
+    <aura:attribute name="selectedMarkerValue" type="String" default="SF1" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <lightning:map
+        mapMarkers="{!v.mapMarkers}"
+        markersTitle="Lunch Gems"
+        onmarkerselect="{!c.handleMarkerSelect}"
+        selectedMarkerValue="{!v.selectedMarkerValue}"/>
+</aura:component>

@@ -1,0 +1,14 @@
+<apex:page controller="WrapperClassForStudent">
+    <apex:form >
+     <apex:pageBlock title="Student Info">
+       <apex:pageBlockTable value="{!WrappList}" var="std">
+            <apex:column headerValue="Student Name">
+           <apex:inputText value="{!std.sname}"/>
+            </apex:column>  
+           <apex:column headerValue="Qualification">
+           <apex:inputText value="{!std.squalification}"/>
+            </apex:column>  
+       </apex:pageBlockTable>   
+     </apex:pageBlock>
+    </apex:form>
+</apex:page>

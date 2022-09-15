@@ -1,0 +1,8 @@
+<apex:page controller="JSONdeserializeUntyped">
+    <apex:pageBlock title="DeserializeUntyped">
+    <apex:pageBlockTable value="{!resultMap}" var="res">
+        <apex:column value="{!res}" headerValue="key"/>
+        <apex:column value="{!resultMap[res]}" headerValue="Value"/>
+    </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

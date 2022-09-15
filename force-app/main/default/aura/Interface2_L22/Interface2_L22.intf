@@ -1,0 +1,8 @@
+<aura:interface description="Interface template">
+    <aura:method name="inputs" action="{!c.getInputs}">
+        <aura:attribute name="Name" type="string"/>
+        <aura:attribute name="Phone" type="string"/>
+        <aura:attribute name="City" type="string"/>
+        <aura:attribute name="Country" type="string"/>
+    </aura:method>             
+</aura:interface>

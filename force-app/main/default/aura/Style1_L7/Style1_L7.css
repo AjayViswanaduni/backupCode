@@ -1,0 +1,21 @@
+.THIS.class1 {
+    height:100px;
+    width:500px;
+    padding:50px;
+    background-color:orange;
+    margin-left:100px;
+}
+.THIS .class2{
+    height:100px;
+    width:500px;
+    padding:50px;
+    background-color:white;
+    margin-left:100px;
+}
+.THIS .class3{
+    height:50px;
+    width:500px;
+    padding:50px;
+    background-color:green;
+    margin-left:100px;
+}

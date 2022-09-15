@@ -1,0 +1,31 @@
+<apex:page standardController="Course__c">
+   <apex:form >
+     <apex:pageBlock >
+       <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!save}"/>
+            <apex:commandButton value="Save & New" action="{!quicksave}"/>
+            <apex:commandButton value="Cancel" action="{!cancel}"/>
+            <apex:commandButton value="Edit" action="{!edit}"/>
+            <apex:commandButton value="Delete" action="{!delete}"/>
+    </apex:pageBlockButtons>
+             <apex:pageBlockSection columns="1" >
+                <apex:pageBlockSectionItem >
+                <apex:outputText >Course Name</apex:outputText>
+                <apex:inputField value="{!Course__c.Name}"/>
+               </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                <apex:outputText >Fee</apex:outputText>
+                <apex:inputField value="{!Course__c.Fee__c}"/>
+               </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                 <apex:outputText >Duration</apex:outputText>
+                 <apex:inputField value="{!Course__c.Duration__c}"/>
+               </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                   <apex:outputText >Mode of Training</apex:outputText>
+                   <apex:inputField value="{!Course__c.Mode_Of_Training__c}"/>
+                   </apex:pageBlockSectionItem>
+           </apex:pageBlockSection>
+        </apex:pageBlock>
+     </apex:form>
+</apex:page>
